@@ -1,5 +1,5 @@
 <div align="center">
-  <img height="60" src="https://skorpil.cz/sites/default/files/2020-03/1_mn6bOs7s6Qbao15PMNRyOA.png">
+  <img height="60" src="https://static-00.iconduck.com/assets.00/typescript-plain-icon-256x256-ypojgpyj.png">
   <h1>Paracetamol.ts</h1>
   <h2>Preguntas de TypeScript</h2>
 
