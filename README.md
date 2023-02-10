@@ -49,3 +49,43 @@ let big: bigint = 100n;
 </details>
 
 ---
+
+##### 2. Explica este código Typescript
+
+```ts
+enum Semana {
+  Lunes,
+  Martes,
+  Miercoles,
+  Jueves,
+  Viernes,
+  Sabado,
+  Domingo,
+}
+
+let diaDivertido: Semana = Semana.Viernes;
+console.log(diaDivertido); //???
+```
+
+- A. `Viernes`
+- B. `4`
+- C. `5`
+- D. `Ninguna de las anteriores`
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅ B. `4`
+
+Los `enum` son útiles para **agrupar conjuntos de constantes relacionadas** además de que se pueden usar como **tipo de dato**.
+Siempre que un procedimiento acepte un conjunto limitado de variables, considere el uso de un `enum`.
+
+En el ejemplo creamos un `enum` llamado `Semana` que contiene todos los días de la semana, la variable `diaDivertido` es de tipo `Semana`, lo que significa que solo puede tener uno de estos valores. 
+
+Por defecto, un `enum` empieza por el valor `0`, (como si se tratara de un arreglo), entonces tendríamos: `0 -> Lunes`, `1 -> Martes`, `2 -> Miercoles`, `3 -> Jueves`, `4 -> Viernes`; por eso el resultado es `4`. 
+
+</p>
+</details>
+
+---
