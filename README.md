@@ -122,27 +122,49 @@ En este caso tenemos `Crema = 10`, y por ende el siguiente valor será `Agua = 1
 
 ---
 
-<!-- ##### 4. Explica este código Typescript
+##### 4. ¿Cúal es la diferencia entre el bloque de código A y el bloque de código B?
+<small> Dificultad: <mark>Intermedio</mark> </small>
 
 ```ts
+//A
+let y:any = "hola";
+console.log(y.toUpperCase()) // HOLA
 
+//B
+let x:unknown = "hola";
+console.log(x.toUpperCase()) // HOLA
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `No hay ninguna diferencia`
+- B. `El tipo de dato unknown no existe en TypeScript`
+- C. `El bloque de código B necesita una comprobación de tipo`
+- D. `Ninguno de los anteriores`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
-✅ 
+✅ C. `El bloque de código B necesita una comprobación de tipo`
+
+¿Cuál es la diferencia entre `any` y `unknown`?
+
+`any` literalmente significa **cualquiera**, osea que una variable de tipo `any` puede almacenar cualquier valor, esto hace que TypeScript pierda un poco de su magia por eso se recomienda usarlo en migraciones de proyectos JavaScript a TypeScript o para la manipulación de librerías de terceros.
+
+`unknown` literalmente significa **desconocido**, en escencia también puede recibir cualquier tipo de dato como `any`, **la diferencia es que a una variable de tipo `unknown` no es posible acceder a sus metodos y propiedades**, antes es necesario hacer una **comprobación de tipos**: 
+
+```ts
+let x:unknown = "hola";
+if(typeof x === "string") console.log(x.toUpperCase()) // HOLA
+```
+
+Des esta manera, primero comprobamos que la variable es de tipo `string` antes de poder usar el método `toUpperCase()` que como sabemos es propio de las cadenas de texto.
+
+`unknown` permite dar un poco más de seguridad que `any` con la comprobación de tipos pero sin perder la capacidad de asignarle cualquier tipo de variable.
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 5. Explica este código Typescript
 
