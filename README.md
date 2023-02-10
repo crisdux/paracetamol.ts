@@ -165,27 +165,42 @@ Des esta manera, primero comprobamos que la variable es de tipo `string` antes d
 
 ---
 
-<!-- ##### 5. Explica este código Typescript
+##### 5. Explica este código Typescript
 
 ```ts
-
+function add(x: number | string, y: number | string) {
+  if (typeof x === 'number' && typeof y === 'number') return x + y;
+  if (typeof x === 'string' && typeof y === 'string') return x.concat(y);
+  throw new Error('Parameters must be numbers or strings');
+}
+console.log(add('one', 'two'));  //🤔
+console.log(add(1, 2));          //🤔
+console.log(add('one', 2));      //🤔
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `TypeError`, `"12"`, `undefined`
+- B. `"onetwo"`, `3`, `Uncaught Error: Parameters must be numbers or strings`
+- C. `"onetwo"`, `"12"`, `null`
+- D. `Ninguno de los anteriores`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
-✅ 
+✅ B. `onetwo`, `3`, `Uncaught Error: Parameters must be numbers or strings`
+
+El signo `|` en TypeScript significa **unión**. 
+
+Esta operación es útil para hacer **multitype**, osea, que una misma variable acepte un conjunto de tipos.
+
+En el ejemplo: `x` y `y` son parámetros que pueden aceptar dos tipos de dato: `number` o `string`. la función varifica, si son `number` los suma, si son `string` los concatena.
+
+El último caso lanza un error por que no tenemos una validación en el cuerpo de la función. 
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 6. Explica este código Typescript
 
