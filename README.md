@@ -89,3 +89,124 @@ Por defecto, un `enum` empieza por el valor `0`, (como si se tratara de un arreg
 </details>
 
 ---
+
+##### 3. Explica este código Typescript
+
+```ts
+enum Helados{
+  Crema = 10,
+  Agua,
+}
+
+let miHeledo: Helados = Helados.Agua;
+console.log(miHeledo)
+```
+
+- A. `10`
+- B. `11`
+- C. `ReferenceError`
+- D. `RangeError`
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅ B. `11`
+
+Los `enum` por defecto empiezan en `0`, tal cual como si fueran un arreglo; lo interesante es que podemos modificar este comportamiento asignando un index arbitrario que reemplace al valor `0` inicial.
+
+En este caso tenemos `Crema = 10`, y por ende el siguiente valor será `Agua = 11`.
+
+</p>
+</details>
+
+---
+
+<!-- ##### 4. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅ 
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 5. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅ 
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 6. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅ 
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 7. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅ 
+
+</p>
+</details>
+
+--- -->
+
