@@ -202,27 +202,34 @@ El último caso lanza un error por que no tenemos una validación en el cuerpo d
 
 ---
 
-<!-- ##### 6. Explica este código Typescript
+##### 6. Explica este código Typescript
 
 ```ts
-
+type Fruta = "pera" | "limon" | "naranja";
+let fruta: Fruta;
+fruta = "zandia"; // A
+fruta = "limon"; // B
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `Ambos son validos`
+- B. `A invalido, B valido`
+- C. `B invalido, A valido`
+- D. `Ninguna de las anteriores`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
-✅ 
+✅ B. `A invalido, B valido`
+
+Si la variable `fruta` fuera de tipo `string` podría recibir cualquier cadena de texto valida, pero que tal si necesitamos restringir la variable para que si o si solo pueda recibir un conjunto de cadenas especificas, en el ejemplo: `pera`, `limon` o `naranja`.
+
+Con la palabra reservada `type` creamos lo que se denomina un **litteral type** `Fruta` que solo puede contener uno de estos tres valores, si intentamos asignarle cualquier otra cosa, como por ejemplo `zandia` tendremos una advertencia para no caer en esta mala practica.
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 7. Explica este código Typescript
 
