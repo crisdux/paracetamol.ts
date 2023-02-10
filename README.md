@@ -231,25 +231,32 @@ Con la palabra reservada `type` creamos lo que se denomina un **litteral type** 
 
 ---
 
-<!-- ##### 7. Explica este código Typescript
+##### 7. ¿Cuál de las siguientes sintaxis de arreglo es la correcta?
 
 ```ts
-
+const numeros: number[] = [1,2,3];
+const nombres: Array<string> = ["Carlos", "Juan"]
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `Solo numeros`
+- B. `Solo nombres`
+- C. `Ninguna es correcta`
+- D. `Ambas son correctas`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
-✅ 
+✅ D. `Ambas son correctas`
+
+En TypeScript tenemos 2 sintaxis para declarar arreglos:
+* Usando `[]` y el tipo de dato del arreglo per se.
+* Usando notación de genericos, la palabra reservada `Array` y entre `<>` el tipo de dato del arreglo.
+
+En la practica no existe ventaja de una sobre la otra, por ello por buenas practicas se recomienda elegir una y usarla de manera consistente a lo largo de todo un proyecto. 
 
 </p>
 </details>
 
---- -->
+---
 
