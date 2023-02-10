@@ -123,7 +123,6 @@ En este caso tenemos `Crema = 10`, y por ende el siguiente valor será `Agua = 1
 ---
 
 ##### 4. ¿Cúal es la diferencia entre el bloque de código A y el bloque de código B?
-<small> Dificultad: <mark>Intermedio</mark> </small>
 
 ```ts
 //A
