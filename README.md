@@ -380,27 +380,33 @@ Uno de los problemas de usar parámetros opcionales es que estos puden venir com
 ---
 
 
-<!-- ##### 11. Explica este código Typescript
+##### 11. Explica este código Typescript
 
 ```ts
-
+const temperatura:[number,string] = [20, "C"]
+temperatura.push("Hola mundo");
+console.log(temperatura); // 🤔🤔
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `[ 20, "C", "Hola mundo" ]`
+- B. `[ 20, "C"]`
+- C. `TypeError`
+- D. `ReferenceError`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
-✅
+✅ A. `[ 20, "C", "Hola mundo" ]`
+
+Las tuplas en TypeScript son como una especie de arreglo con restrucciones de posición, cuando creamos una tupla como esta `const temperatura:[number,string] = [20, "C"]` queremos decir que explicitamente necesitamos un arreglo de dos posiciones: la primera recibirá un valor numérico y la segunda una cadena.
+
+Al usar el método `push` intentamos agregar un tercer elemento a una tupla que solo admite dos. Este es un caso particular que solo pasa con tuplas cuando queremos agregarle un nuevo elemento, un comportamiento similar ocurre con el método `concat` o usando el spread operator.
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 12. Explica este código Typescript
 
