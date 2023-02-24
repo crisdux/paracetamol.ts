@@ -303,27 +303,37 @@ Mas información sobre el objeto `Intl` [aquí](https://developer.mozilla.org/en
 
 ---
 
-<!-- ##### 9. Explica este código Typescript
+##### 9. Explica este código Typescript
 
 ```ts
-
+let addThreeNumbers = (x: number, y: number, z: number): number => x + y + z;
+console.log(addThreeNumbers(10, 20))
+console.log(addThreeNumbers(10, 20, 30, 40))
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `30`, `100`
+- B. `30`, `60`
+- C. `NaN`, `60`
+- D. `undefined`, `60`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
-✅
+✅ C. `NaN`, `60`
+
+Todos los parámetros de la función `addThreeNumbers` son obligatorios, lo que significa que para recibir la salida correcta debemos pasarle el número exacto de parámetros.
+
+Para el primer caso:
+`x = 10`, `y = 20`, `z = undefined`, entonces `10 + 20 + undefined` no es una operación valida, por ello el resultado es `NaN`. Además TypeScript nos ayuda un poco mas dandonos una advertencia: `Expected 3 arguments, but got 2.`
+
+Para el segundo caso: 
+`x = 10`, `y = 20`, `z = 30`, pero el 40 no tiene un parámetro asignado dentro de la función, así que al igual como en JavaScript este valor será completamente ignorado regresando `60` pero con una advertencia en nuestro editor: `Expected 3 arguments, but got 4.`
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 10. Explica este código Typescript
 
