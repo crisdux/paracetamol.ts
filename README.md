@@ -335,27 +335,49 @@ Para el segundo caso:
 
 ---
 
-<!-- ##### 10. Explica este código Typescript
+##### 10. Explica este código Typescript
 
 ```ts
+const fn = (name?:string, edad:number) => {
+  return `${name} - ${edad}`
+}
 
+console.log(fn("Carlos", 25))
+console.log(fn(25))
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+A. `Carlos - 25`, `undefined - 25`
+B. `Carlos - 25`, `25 - undefined`
+C. `Carlos - 25`, `TypeError`
+D. `Carlos - 25`, `undefined - undefined`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
-✅
+✅ B. `Carlos - 25`, `25 - undefined`
+
+En TypeScript existen los parámetros opcionales (que no es lo mismo que los parámetros por defecto), consiste obviamente en dar la posibilidad al programa de funcionar normalmente omitiendo el parámetro opcional.
+
+En TypeScript todos los parámetros de una función son obligatorios a no ser que se le indique lo contrario. La única condición para usarlos es que los parámetros opcionales deben ser escritos al final de la función siempre: 
+
+```ts
+const fn = (edad: number, name?: string) => {
+  return `${name} - ${edad}`
+}
+
+console.log(fn(25, "Carlos")) // Carlos - 25
+console.log(fn(25)) // undefined - 25
+```
+
+Pese a que la salida es similar al resultado de este reto, esta sería la forma correcta de escribir la función para que no salten advertencias en nuestro editor de código.
+
+Uno de los problemas de usar parámetros opcionales es que estos puden venir como `undefined` entonces tenemos que validar estos casos, pero esto lo dejamos para otro reto...
 
 </p>
 </details>
 
---- -->
+---
 
 
 <!-- ##### 11. Explica este código Typescript
