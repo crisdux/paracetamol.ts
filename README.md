@@ -452,27 +452,38 @@ En muchas ocaciones no es necesario escribir de manera explicita el tipo de reto
 
 ---
 
-<!-- ##### 13. Explica este código Typescript
+##### 13. Explica este código Typescript
 
 ```ts
+function f1(): void {
+  return undefined;
+}
 
+function f2(): void { }
+
+console.log(f1()) // 🤔
+console.log(f2()) // 🤔
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `undefined`, `void`
+- B. `null`, `null`
+- C. `undefined`, `undefined`
+- D. `undefined`, `NaN`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
-✅
+✅ C. `undefined`, `undefined`
 
+`void` es un tipo de retorno que se suele usar a menudo con algunas funciones. En praxis significa que una función regresa `undefined`. 
+
+* `f1` literalmente regresa `undefined`.
+* `f2` al no tener cuerpo, también regrasa `undefined`.
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 14. Explica este código Typescript
 
