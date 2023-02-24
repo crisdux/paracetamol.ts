@@ -5,7 +5,7 @@
 
 ---
 
-<span>Me encanta JavaScript, pero en pleno 2023 me parece una necesidad aprender TypeScript tarde o temprano, este repo en un intento para lograr eso. Última vez actualizado: <a href=#20230201><b>01 Feb</b></a>
+<span>Me encanta JavaScript, pero en pleno 2023 me parece una necesidad aprender TypeScript tarde o temprano, este repo en un intento para lograr eso. Última vez actualizado: <a href=#20230224><b>24 Feb</b></a>
 
 Los retos consisten en preguntas de selección múltiple en tres niveles: Básico, Intermedio y Avanzado. Las respuestas estarán collapsadas para no spoilearnos, el objetivo es aprender, así que trata de solucionar el reto sin ver la solución ni ejecutar el código.
 
@@ -260,3 +260,178 @@ En la practica no existe ventaja de una sobre la otra, por ello por buenas pract
 
 ---
 
+##### 8. Explica este código Typescript
+
+```ts
+function welcomePeople(x: string[] | string) {
+  if (Array.isArray(x)) {
+    const formatter = new Intl.ListFormat('es', { style: 'long', type: 'conjunction' });
+    console.log(`Hello ${formatter.format(x)}`);
+  } else {
+    console.log("Welcome lone traveler " + x);
+  }
+}
+
+welcomePeople(["Alice", "Philip", "Anet"])
+welcomePeople("Alice")
+```
+
+- A. `"Hello Alice, Philip y Anet"`, `"Welcome lone traveler Alice"`
+- B. `"Hello undefined, undefined y undefined"`, `"Welcome lone traveler undefined"`
+- C. `"Hello null, null y null"`, `"Welcome lone traveler null"`
+- D. `Ninguna de las anteriores`
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅ A. `"Hello Alice, Philip y Anet"`, `"Welcome lone traveler Alice"`
+
+La función `welcomePeople` recibe un parámetro `x` que puede ser un arreglo de objetos o una cadena, por ende nuestro código tendra comportamientos diferentes dependiendo del argumento que le pasemos.
+
+Cuando le pasamos un arreglo, usamos el objeto `Intl` para formatear el arreglo en forma de lista imprimiendo `"Hello Alice, Philip y Anet"`.
+
+Y si pasamos una cadena solo concatenamos su valor e imprimimos `"Welcome lone traveler Alice"`.
+
+---
+
+Mas información sobre el objeto `Intl` [aquí](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+
+
+</p>
+</details>
+
+---
+
+<!-- ##### 9. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 10. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅
+
+</p>
+</details>
+
+--- -->
+
+
+<!-- ##### 11. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 12. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 13. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 14. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+✅
+
+</p>
+</details>
+
+--- -->
