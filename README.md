@@ -408,27 +408,49 @@ Al usar el método `push` intentamos agregar un tercer elemento a una tupla que 
 
 ---
 
-<!-- ##### 12. Explica este código Typescript
+##### 12. Explica este código Typescript
 
 ```ts
+function stringify123(callback: (num: number) => string):string {
+  return callback(123);
+}
 
+console.log(stringify123(String));
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `"123"`
+- B. `123`
+- C. `ReferenceError`
+- D. `Ninguna de las anteriores`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
-✅
+✅ B. `123`
+
+Las funciones en TypeScript pueden ser escritas de manera explicita con su valor de retorno.
+En el ejemplo:
+* El callback regresa `string`:
+
+```ts
+callback: (num: number) => string
+```
+
+* Y la función principal `stringify123` también regresa un `string`:
+
+```ts
+function stringify123(callback: (num: number) => string):string {}
+```
+
+Al pasarle como callback el contructor `String` convertiremos cualquier número a cadena de texto, por ello el resultado es `123` como número.
+
+En muchas ocaciones no es necesario escribir de manera explicita el tipo de retorno de una función, TypeScript tiene la capacidad de deducirlo según el código que escribamos; en otras ocaciones por legibilidad es mejor si escribirlo, así sabemos de una pasada el valor de retorno de una fucnión sin leer su cuerpo. Ya depende de cada dev.
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 13. Explica este código Typescript
 
