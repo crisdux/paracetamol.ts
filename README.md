@@ -485,24 +485,38 @@ console.log(f2()) // 🤔
 
 ---
 
-<!-- ##### 14. Explica este código Typescript
+##### 14. Explica este código Typescript
 
 ```ts
+const f1 = (a = 0, b = 0):[number, number] => {
+  return [a, b]
+}
 
+console.log(f1()) // 🤔
+console.log(f1(1,2)) // 🤔
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `[number, number]`, `[1, 2]`
+- B. `ReferenceError`, `[1, 2]`
+- C. `undefined`, `[1, 2]`
+- D. `[0, 0]`, `[1, 2]`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
-✅
+✅ D. `[0, 0]`, `[1, 2]`
+
+TypeScript al igual que JavaScript admite valores por defecto para los parámetros.
+En este caso la función `f1` recibe dos parámetros: `a` y `b` que tienen valores por defecto de `0`; la función regresa una tupla de dos posiciones ambas de tipo `number`; finalmente solo regresamos la tupla.
+
+Para el primer caso:
+Llamamos a la función sin ningún parámetro, por ello regresamos los valores por defecto : [0, 0].
+
+Para el segundo caso:
+Llamos a la función con los parámetros `f1(1,2)` entonces regresamos dichos valores en el formato de la tupla, omitiendo asi los valores por defecto: `[1, 2]`
 
 </p>
 </details>
 
---- -->
+---
