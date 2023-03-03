@@ -520,3 +520,239 @@ Llamos a la función con los parámetros `f1(1,2)` entonces regresamos dichos va
 </details>
 
 ---
+
+##### 15. Explica este código Typescript
+
+```ts
+const obj = {
+  id: 1,
+  title: "test",
+}
+obj.description = "hello";
+console.log(obj); // 🤔
+```
+
+- A. `{ description: "hello", id:1, title: "test" }`
+- B. `TypeError`
+- C. `{ id:1, title: "test" }`
+- D. `ReferenceError`
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### **Respuesta**: 
+
+✅ A. `{ description: "hello", id:1, title: "test" }`
+
+La respuesta de este reto es un poco trampa y vamos a explicar por que.
+
+El código del reto tanto en JavaScript como en TypeScript se ejecuta sin ningún error, peeero en TypeScript nos marca una advertencia: `Property 'description' does not exist on type '{ id: number; title: string; }'`; ¿pero por que pasa esto?
+
+En TypeScript los objetos literales son como interfaces anónimas, lo que quiere decir que deben cumplir el contrato que las contiene.
+
+En nuestro ejemplo, el objeto `obj` es del tipo `{ id: number; title: string; }` lo que significa que debe tener un campo `id` y un campo `title` si o si, no mas campos ni menos.
+
+Al intentar agregar el campo `description` el contrato se rompe y esto causa la advertencia que nos arroja TypeScript.
+
+</p>
+</details>
+
+---
+
+<!-- ##### 16. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 17. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 18. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 19. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 20. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 21. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 22. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 23. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 24. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
