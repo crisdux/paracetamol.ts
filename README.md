@@ -641,27 +641,50 @@ A tomar en cuenta!
 
 ---
 
-<!-- ##### 18. Explica este código Typescript
+##### 18. Explica este código Typescript
+
+¿Cúal de las siguientes sintaxis de enum es una buena practica?
 
 ```ts
+//A
+enum diasDeLaSemana{
+ ...
+};
 
+//B
+enum diasdelasemana{
+  ...
+}
+
+//C
+enum dias_de_la_semana{
+  ...
+}
+
+//D
+enum DiasDeLaSemana{
+  ...
+}
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `A`
+- B. `B`
+- C. `C`
+- D. `D`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 
+✅ D. `D`
+
+Si bien todas son sintaxis válidas y funcionarían sin ningún problema, usar PascalCase es lo que se aconseja para tener un código con buenas practicas.
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 19. Explica este código Typescript
 
