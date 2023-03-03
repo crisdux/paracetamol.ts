@@ -606,27 +606,40 @@ Pasamos como argumento `Values.Yes`, por ello la salida es `Oui`.
 
 ---
 
-<!-- ##### 17. Explica este código Typescript
+##### 17. Explica este código Typescript
 
 ```ts
+enum Values{
+  "No" = false,
+  "Yes",
+  "Maybe",
+};
 
+console.log(Values.No);
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `0`
+- B. `No`
+- C. `Type 'false' is not assignable to type 'Values'`
+- D. `Ninguno de los anteriores`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 
+✅ C. `Type 'false' is not assignable to type 'Values'`
+
+Los `enum` en TypeScript solo pueden ser inicializados con valores  de tipo `string` o `number`. 
+
+Si intentamos usar cualquier otro valor como inicializador tendremos un error, no podemos usar arreglos, objetos, boleanos, ni siquiera símbolos.
+
+A tomar en cuenta!
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 18. Explica este código Typescript
 
