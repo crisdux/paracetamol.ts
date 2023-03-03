@@ -5,7 +5,7 @@
 
 ---
 
-<span>Me encanta JavaScript, pero en pleno 2023 me parece una necesidad aprender TypeScript tarde o temprano, este repo en un intento para lograr eso. Última vez actualizado: <a href=#20230224><b>24 Feb</b></a>
+<span>Me encanta JavaScript, pero en pleno 2023 me parece una necesidad aprender TypeScript tarde o temprano, este repo en un intento para lograr eso. Última vez actualizado: <a href=#20230303><b>03 Mar</b></a>
 
 Los retos consisten en preguntas de selección múltiple en tres niveles: Básico, Intermedio y Avanzado. Las respuestas estarán collapsadas para no spoilearnos, el objetivo es aprender, así que trata de solucionar el reto sin ver la solución ni ejecutar el código.
 
@@ -35,7 +35,7 @@ let big: bigint = 100n;
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ D. `Todas`
 
 `number` y `bigint` son tipos de datos primitivos en TypeScript, veamos caso por caso:
@@ -75,7 +75,7 @@ console.log(diaDivertido); //???
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ B. `4`
 
 Los `enum` son útiles para **agrupar conjuntos de constantes relacionadas** además de que se pueden usar como **tipo de dato**.
@@ -110,7 +110,7 @@ console.log(miHeledo)
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ B. `11`
 
 Los `enum` por defecto empiezan en `0`, tal cual como si fueran un arreglo; lo interesante es que podemos modificar este comportamiento asignando un index arbitrario que reemplace al valor `0` inicial.
@@ -142,7 +142,7 @@ console.log(x.toUpperCase()) // HOLA
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ C. `El bloque de código B necesita una comprobación de tipo`
 
 ¿Cuál es la diferencia entre `any` y `unknown`?
@@ -186,7 +186,7 @@ console.log(add('one', 2));      //🤔
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ B. `onetwo`, `3`, `Uncaught Error: Parameters must be numbers or strings`
 
 El signo `|` en TypeScript significa **unión**. 
@@ -219,7 +219,7 @@ fruta = "limon"; // B
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ B. `A invalido, B valido`
 
 Si la variable `fruta` fuera de tipo `string` podría recibir cualquier cadena de texto valida, pero que tal si necesitamos restringir la variable para que si o si solo pueda recibir un conjunto de cadenas especificas, en el ejemplo: `pera`, `limon` o `naranja`.
@@ -246,7 +246,7 @@ const nombres: Array<string> = ["Carlos", "Juan"]
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ D. `Ambas son correctas`
 
 En TypeScript tenemos 2 sintaxis para declarar arreglos:
@@ -284,7 +284,7 @@ welcomePeople("Alice")
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ A. `"Hello Alice, Philip y Anet"`, `"Welcome lone traveler Alice"`
 
 La función `welcomePeople` recibe un parámetro `x` que puede ser un arreglo de objetos o una cadena, por ende nuestro código tendra comportamientos diferentes dependiendo del argumento que le pasemos.
@@ -319,7 +319,7 @@ console.log(addThreeNumbers(10, 20, 30, 40))
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ C. `NaN`, `60`
 
 Todos los parámetros de la función `addThreeNumbers` son obligatorios, lo que significa que para recibir la salida correcta debemos pasarle el número exacto de parámetros.
@@ -354,7 +354,7 @@ D. `Carlos - 25`, `undefined - undefined`
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ B. `Carlos - 25`, `25 - undefined`
 
 En TypeScript existen los parámetros opcionales (que no es lo mismo que los parámetros por defecto), consiste obviamente en dar la posibilidad al programa de funcionar normalmente omitiendo el parámetro opcional.
@@ -396,7 +396,7 @@ console.log(temperatura); // 🤔🤔
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ A. `[ 20, "C", "Hola mundo" ]`
 
 Las tuplas en TypeScript son como una especie de arreglo con restrucciones de posición, cuando creamos una tupla como esta `const temperatura:[number,string] = [20, "C"]` queremos decir que explicitamente necesitamos un arreglo de dos posiciones: la primera recibirá un valor numérico y la segunda una cadena.
@@ -426,7 +426,7 @@ console.log(stringify123(String));
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ B. `123`
 
 Las funciones en TypeScript pueden ser escritas de manera explicita con su valor de retorno.
@@ -473,7 +473,7 @@ console.log(f2()) // 🤔
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ C. `undefined`, `undefined`
 
 `void` es un tipo de retorno que se suele usar a menudo con algunas funciones. En praxis significa que una función regresa `undefined`. 
@@ -504,7 +504,7 @@ console.log(f1(1,2)) // 🤔
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 ✅ D. `[0, 0]`, `[1, 2]`
 
 TypeScript al igual que JavaScript admite valores por defecto para los parámetros.
