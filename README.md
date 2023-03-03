@@ -758,27 +758,50 @@ Los `enum` que se inicializan con cadenas de texto no admiten valores computados
 
 ---
 
-<!-- ##### 21. Explica este código Typescript
+##### 21. Explica este código Typescript
 
 ```ts
+enum FinDeSemana {
+  "Sabado" = "Sábado",
+  "Domingo" = "Domingo",
+}
 
+const fn = (dia:FinDeSemana) => {
+  return dia;
+}
+
+console.log(fn(123))
+console.log(fn("Domingo"))
+console.log(fn(FinDeSemana.Domingo))
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `Error`, `Error`, `Error`
+- B. `123`, `Domingo`, `Domingo`
+- C. `Error`, `Error`, `Domingo`
+- D. `Error`, `Domingo`, `Domingo`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 
+✅ C. `Error`, `Error`, `Domingo`
+
+Los `enum` pueden ser unsados como tipos de datos, la función `fn` recibe un parámetro de tipo `FinDeSemana` lo que significa que solo puede funcionar con los valores de `FinDeSemana`.
+
+* Para `fn(123)`:
+❌ Nos da error, ya que `123` no es un valor válido para `FinDeSemana`.
+
+* Para `fn("Domingo")`:
+❌ Nos da error, pese a que la cadena `Domingo` si pertenece al `enum` no funciona por que el valor en cadena `Domingo` no es lo mismo que acceder al `enum` así `FinDeSemana.Domingo`.
+
+* Para `fn(FinDeSemana.Domingo)`:
+✅ Si funciona, la menra correcta de pasar el argumento a la función es `FinDeSemana.Domingo`
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 22. Explica este código Typescript
 
