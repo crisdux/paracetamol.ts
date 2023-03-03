@@ -686,27 +686,41 @@ Si bien todas son sintaxis válidas y funcionarían sin ningún problema, usar P
 
 ---
 
-<!-- ##### 19. Explica este código Typescript
+##### 19. Explica este código Typescript
 
 ```ts
+enum Constantes {
+  "PI" = "Pi",
+  "E" = "e",
+}
 
+const func = (con: Constantes.PI):string => {
+  return con;
+}
+console.log(func(Constantes.PI)); // 🤔
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `TypeError`
+- B. `ReferenceError`
+- C. `Pi`
+- D. `e`
+
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 
+✅ C. `Pi`
+
+Los `enum` pueden ser usados como tipos de datos, así tal y como se tratara de un literal type. No es muy usual este comportamiento porque tenemos types e interfaces para hacer lo mismo, pero de que se puede se puede.
+
+En este ejemplo, el parámetro `con` al ser de tipo `Constantes.PI` solo podrá recibir el valor `Constantes.PI` como argumento, convirtiendo en inutil el valor `Constantes.E`. 
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 20. Explica este código Typescript
 
