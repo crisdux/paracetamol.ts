@@ -559,27 +559,52 @@ Al intentar agregar el campo `description` el contrato se rompe y esto causa la 
 
 ---
 
-<!-- ##### 16. Explica este código Typescript
+##### 16. Explica este código Typescript
 
 ```ts
+enum Values{
+  "No",
+  "Yes",
+  "Maybe"
+};
 
+function print(value: Values){
+  switch(value){
+    case Values.No:
+      return "Non";
+      break;
+    case Values.Yes:
+      return "Oui";
+      break;
+    default:
+      return "Maybe"
+  }
+}
+console.log(print(Values.Yes)) // 🤔
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `Oui`
+- B. `Non`
+- C. `Maybe`
+- D. `Ninguno de los anteriores`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 
+✅ A. `Oui`
+
+Los `enum` son una cualidad propia de TypeScript que no existe de manera nativa en JavaScript.
+
+En terminos sencillos, los `enum` son un conjunto de variables que comparten algo en común; en nuestro ejemplo la función `print` recibe un `value` de tipo `Values`, esto significa que value solo podría ser "No", "Yes" o "Maybe", pasarle otro valor producirá un error.
+
+Pasamos como argumento `Values.Yes`, por ello la salida es `Oui`.
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 17. Explica este código Typescript
 
