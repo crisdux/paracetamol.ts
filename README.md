@@ -868,3 +868,5 @@ Los `enum` pueden ser unsados como tipos de datos, la función `fn` recibe un pa
 </details>
 
 --- -->
+
+Proximamente más retos... 
