@@ -722,27 +722,41 @@ En este ejemplo, el parámetro `con` al ser de tipo `Constantes.PI` solo podrá 
 
 ---
 
-<!-- ##### 20. Explica este código Typescript
+##### 20. Explica este código Typescript
 
 ```ts
+enum FinDeSemana {
+  "Sabado" = "SABADO",
+  "Domingo" = "domingo".toUpperCase()
+}
 
+enum SiNo {
+  "Si" = 1,
+  "No" = Math.random()
+}
+
+console.log(FinDeSemana.Domingo)
+console.log(SiNo.No)
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `DOMINGO`, `Un valor random calculado`
+- B. `Computed values are not permitted in an enum with string valued members.`, `Un valor random calculado`
+- C. `undefined`, `TypeError`
+- D. `undefined`, `undefined`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 
+✅ B. `Computed values are not permitted in an enum with string valued members.`, `Un valor random calculado`
+
+Los `enum` que se inicializan con cadenas de texto no admiten valores computados o calculados, pero los `enum` que se inicializan con valores numericos si, por ello usar `Math.random` es perfectamente valido y no así `toUpperCase`.
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 21. Explica este código Typescript
 
