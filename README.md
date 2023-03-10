@@ -5,7 +5,7 @@
 
 ---
 
-<span>Me encanta JavaScript, pero en pleno 2023 me parece una necesidad aprender TypeScript tarde o temprano, este repo en un intento para lograr eso. Última vez actualizado: <a href=#20230303><b>03 Mar</b></a>
+<span>Me encanta JavaScript, pero en pleno 2023 me parece una necesidad aprender TypeScript tarde o temprano, este repo en un intento para lograr eso. Última vez actualizado: <a href=#20230310><b>10 Mar</b></a>
 
 Los retos consisten en preguntas de selección múltiple en tres niveles: Básico, Intermedio y Avanzado. Las respuestas estarán collapsadas para no spoilearnos, el objetivo es aprender, así que trata de solucionar el reto sin ver la solución ni ejecutar el código.
 
@@ -803,27 +803,44 @@ Los `enum` pueden ser unsados como tipos de datos, la función `fn` recibe un pa
 
 ---
 
-<!-- ##### 22. Explica este código Typescript
+##### 22. Explica este código Typescript
 
 ```ts
+enum FinDeSemana {
+  "Sabado",
+  "Domingo",
+}
 
+console.log(FinDeSemana[0]) // 🤔
+console.log(FinDeSemana[3]) // 🤔
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `Sabado`, `undefined`
+- B. `0`, `undefined`
+- C. `0`, `3`
+- D. `Sabado`, `Domingo`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**:
 
+✅ A. `Sabado`, `undefined`
+
+En los enums de TypeScript tenemos una característica denominada Acceso Inverso, consiste en proporcionar el valor del enum para acceder al su descriptor.
+
+En este caso, `FinDeSemana` es un enum numérico donde: 
+
+* `console.log(FinDeSemana[0])` nos regresa `Sabado`, el descriptor correspondiente a la propiedad.
+
+* `console.log(FinDeSemana[3])` nos regresa `undefined` por que no hay un valor `3` para ninguna propiedad.
+
+Algo importante a recalcar es que el Acceso Inverso a enums solo esta disponible para enums numericos, intentar hacer lo mismo con enums de strings nos dará errores.
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 23. Explica este código Typescript
 
