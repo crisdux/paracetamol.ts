@@ -989,7 +989,7 @@ const x:(number | string)[];
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 
 ✅ D. `Todos los anteriores`
 
@@ -1005,27 +1005,37 @@ Cualquier otro valor fuera de los mencionados producira un error.
 
 ---
 
-<!-- ##### 27. Explica este código Typescript
+##### 27. Explica este código Typescript
 
 ```ts
-
+let y: number[] | string[];
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+¿Cuál de los siguientes arreglos **no** es asignable a `y`?
+
+- A. `[]`
+- B. `[1, 2, 3]`
+- C. `["uno", "dos", "tres"]`
+- D. `[1, "dos", 3]`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 
+✅ D. `[1, "dos", 3]`
+
+La sintaxis de `y` solo acepta valores:
+* Arreglos **solo** de números.
+* Arreglos **solo** de cadenas de texto.
+
+No acepta arreglos mixtos, la sintaxis para arreglos mixtos sería:
+`let y:(number | string)[];`
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 28. Explica este código Typescript
 
