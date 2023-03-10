@@ -875,6 +875,7 @@ Los literal types permiten una mayor especificación sobre los valores que podem
 ---
 
 ##### 24. Explica este código Typescript
+¿Qué hay de malo con este código?
 
 ```ts
 type Id = number | string
