@@ -874,7 +874,176 @@ Los literal types permiten una mayor especificación sobre los valores que podem
 
 ---
 
-<!-- ##### 24. Explica este código Typescript
+##### 24. Explica este código Typescript
+
+```ts
+type Id = number | string
+type Size = "small" | "medium" | "big"
+
+interface Dog {
+  id: Id;
+  name: string;
+  age: number;
+}
+
+interface Dog {
+  id: Id;
+  name: string;
+  age: number;
+  color: string;
+  size: Size;
+}
+
+const cooker:Dog = { // este objeto esta bien o no? 
+  id: 1,
+  name: "boby",
+  age: 2,
+}
+
+console.log(cooker)
+```
+
+- A. `Imprime cooker por consola sin ningún error`
+- B. `Imprime cooker por consola pero con una advertencia`
+- C. `Error, no imprime nada`
+- D. `Ninguna de las anteriores`
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### **Respuesta**: 
+
+✅ B. `Imprime cooker por consola pero con una advertencia`
+
+Pese a que hay más similitudes que diferencias entre un `type` y una `interface`, este ejemplo esta bueno para ver justamente eso, sus diferencias.
+
+Como vemos tenemos dos interfaces `Dog`, podras pensar que esto puede dar un error, pero no es así:
+
+**1ra diferencia:**
+Podemos crear interfaces con el mismo nombre sin errores, de hecho la 2da interfaz `Dog` sobre escribe a la primera, siendo esta la que debemos usar.
+Esto no es posible hacerlo con `types`, no podemos tener dos `types` con el mismo nombre.
+
+`cooker` se imprime efectivamente, pero tenemos la advertencia de que no esta completo, faltan las propiedades `color` y `size`.
+
+**2da diferencia:**
+Las interfaces estan hechas para ser usadas con clases o para crear objetos, mientras que los `types` son más útiles para tipos primitivos.
+
+</p>
+</details>
+
+---
+
+<!-- ##### 25. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 26. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 27. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 28. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 29. Explica este código Typescript
+
+```ts
+
+```
+
+- A. ``
+- B. ``
+- C. ``
+- D. ``
+
+<details><summary><b>Respuesta</b></summary>
+<p>
+
+#### Respuesta: 
+
+
+</p>
+</details>
+
+--- -->
+
+<!-- ##### 30. Explica este código Typescript
 
 ```ts
 
