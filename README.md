@@ -842,27 +842,37 @@ Algo importante a recalcar es que el Acceso Inverso a enums solo esta disponible
 
 ---
 
-<!-- ##### 23. Explica este código Typescript
+##### 23. Explica este código Typescript
 
+¿Cuál de los siguientes tipos es un _Literal Type_?
 ```ts
-
+type NumberOrString = number | string;
+type BigIntOrNumber = bigint | number;
+type FinDeSemana = "viernes" | "sabado" | "domingo";
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `NumberOrString`
+- B. `BigIntOrNumber`
+- C. `FinDeSemana`
+- D. `Ninguno de los anteriores`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 
+✅ C. `FinDeSemana`
+
+Tanto `NumberOrString` como `BigIntOrNumber` son types normales, por ejemplo, `NumberOrString` acepta cualquier valor siempre y cuando sea un número o una cadena de texto.
+
+En cambio, `FinDeSemana` es un literal type por que solo acepta una de las tres cadenas de texto: `"viernes"` o `"sabado"` o `"domingo"`, cualquier otro valor que no sea ninguno de estos tres será conciderado un error. 
+
+Los literal types permiten una mayor especificación sobre los valores que podemos manipular en nuestro código.
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 24. Explica este código Typescript
 
