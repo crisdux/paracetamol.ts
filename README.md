@@ -972,27 +972,38 @@ Si usamos interfaces estamos obligados a usar objetos, por ello son más útiles
 
 ---
 
-<!-- ##### 26. Explica este código Typescript
+##### 26. Explica este código Typescript
 
 ```ts
-
+const x:(number | string)[];
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+¿Cuál de los siguientes arreglos es asignable a `x`?
+
+- A. `[1, 2, 3]`
+- B. `["1", "2", "3"]`
+- C. `[1, "2", 3]`
+- D. `Todos los anteriores`
+- E. `Ninguno de los anteriores`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
 #### Respuesta: 
 
+✅ D. `Todos los anteriores`
+
+La sintaxis `(number | string)[]` quiere decir que podemos crear:
+* Arreglos de **solo** de números.
+* Arreglos de **solo** de cadenas de texto.
+* Arreglos mixtos: de números y cadenas de texto.
+
+Cualquier otro valor fuera de los mencionados producira un error. 
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 27. Explica este código Typescript
 
