@@ -934,27 +934,43 @@ Las interfaces estan hechas para ser usadas con clases o para crear objetos, mie
 
 ---
 
-<!-- ##### 25. Explica este código Typescript
+##### 25. Explica este código Typescript
+
+¿Qué hay de malo con este código?
 
 ```ts
+type GreenColor = "00ff00" | "22be22" | "green"
+const green:GreenColor = "22be22";
+console.log(green)
 
+interface RedColor {
+  color: "ff0000" | "be2222" | "red"
+}
+
+const red:RedColor = {color:"ff0000"} 
+console.log(red)
 ```
 
-- A. ``
-- B. ``
-- C. ``
-- D. ``
+- A. `"22be22"`, `{color: "22be22"}`
+- B. `"22be22"`, `TypeError`
+- C. `SyntaxisError`
+- D. `Ninguna de las anteriores`
 
 <details><summary><b>Respuesta</b></summary>
 <p>
 
-#### Respuesta: 
+#### **Respuesta**: 
 
+✅ A. `"22be22"`, `{color: "22be22"}`
+
+Los `types` son estupendos para tipos primitivos o en este caso tipos literales.
+
+Si usamos interfaces estamos obligados a usar objetos, por ello son más útiles para ello mismo, manipulación y estructura de objetos.
 
 </p>
 </details>
 
---- -->
+---
 
 <!-- ##### 26. Explica este código Typescript
 
